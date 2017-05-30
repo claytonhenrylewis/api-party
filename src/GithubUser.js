@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './GithubUser.css'
 
 class GithubUser extends Component {
   state = {
@@ -25,7 +26,7 @@ class GithubUser extends Component {
   render() {
     const {user} = this.state;
     return (
-      <div className="user">
+      <div className="github-user">
         <img src={user.avatar_url} alt="user" />
         <h2>{user.login}</h2>
         <h3>followers: {user.followers}</h3>
