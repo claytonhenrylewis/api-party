@@ -4,6 +4,7 @@ import Github from './Github'
 import Nasa from './Nasa'
 import Homework from './Homework'
 import Spotify from './Spotify';
+import Pokemon from './Pokemon';
 import './App.css';
 
 class App extends Component {
@@ -28,6 +29,9 @@ class App extends Component {
             <li>
               <NavLink to={'/spotify'}>Spotify</NavLink>
             </li>
+            <li>
+              <NavLink to={'/pokemon'}>Pokemon</NavLink>
+            </li>
           </ul>
         </div>
         <Switch>
@@ -35,6 +39,7 @@ class App extends Component {
           <Route path='/nasa' component={Nasa} />
           <Route path='/homework' component={Homework} />
           <Route path='/spotify' component={Spotify} />
+          <Route path='/pokemon' component={Pokemon} />
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
       </div>
