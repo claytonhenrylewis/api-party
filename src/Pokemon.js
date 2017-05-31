@@ -24,7 +24,7 @@ class Pokemon extends Component {
         <img className="pokemon-logo" src="http://thecraftchop.com/files/others/Pokeball.svg" alt="pokemon" />
         <form onSubmit={this.handleSubmit}>
           <div>
-            <input type="number" value={this.state.number} onChange={this.handleChange}/>
+            <input type="text" value={this.state.number} onChange={this.handleChange}/>
           </div>
           <div>
             <button type="submit">Look up Pokemon</button>
