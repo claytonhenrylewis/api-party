@@ -18,6 +18,12 @@ class Pokemon extends Component {
     this.props.history.push(`/pokemon/${this.state.number}`);
   }
 
+  randomNumber = (e) => {
+    e.preventDefault();
+    this.setState({number: Math.floor(Math.random() * 721) + 1});
+    this.props.history.push(`/pokemon/${this.state.number}`);
+  }
+
   render = () => {
     return (
       <div className="pokemon">
@@ -28,6 +34,7 @@ class Pokemon extends Component {
           </div>
           <div>
             <button type="submit">Look up Pokemon</button>
+            <button onClick={this.randomNumber}>Random Pokemon</button>
           </div>
         </form>
         <Route path='/pokemon/:number' component={PokedexEntry} />
